@@ -61,7 +61,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGO-vd-XzV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="qGO-vd-XzV">
                                 <rect key="frame" x="36" y="87" width="303" height="168.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qGO-vd-XzV" secondAttribute="height" multiplier="9:5" id="pd9-YO-NYm"/>
@@ -194,4 +194,7 @@
             <point key="canvasLocation" x="-790" y="-821"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="512" height="512"/>
+    </resources>
 </document>
