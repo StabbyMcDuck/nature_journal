@@ -7,19 +7,50 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var locationButton: UIButton!
+    
+    var audioRecorder : AVAudioRecorder?
+    var audioPlayer : AVAudioPlayer?
+    var audioURL : URL?
     
     var imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Image Picker
         imagePicker.delegate = self
         
+        // Audio Session
+        let session = AVAudioSession.sharedInstance()
+        try? session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        try? session.overrideOutputAudioPort(.speaker)
+        try? session.setActive(true)
+        
+        // URL to save audio
+        if let baseDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
+            
+            let pathComponents = [baseDirectoryPath, "itemAudio.m4a"]
+            if let audioURL = NSURL.fileURL(withPathComponents: pathComponents) {
+                // Settings
+                self.audioURL = audioURL
+                var audioSettings : [String:Any] = [:]
+                audioSettings[AVFormatIDKey] = Int(kAudioFormatMPEG4AAC)
+                audioSettings[AVSampleRateKey] = 44100.0
+                audioSettings[AVNumberOfChannelsKey] = 2
+                
+                // Create audio recorder
+                try? audioRecorder = AVAudioRecorder(url: audioURL, settings: audioSettings)
+                audioRecorder?.prepareToRecord()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,10 +93,33 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
             navigationController?.popViewController(animated: true)
         }
     }
-
+    
     @IBAction func recordTapped(_ sender: Any) {
+        
+        if let audioRecorder = self.audioRecorder{
+            if audioRecorder.isRecording {
+                audioRecorder.stop()
+                recordButton.setImage(#imageLiteral(resourceName: "microphone"), for: .normal)
+                
+            } else {
+                audioRecorder.record()
+                recordButton.setImage(#imageLiteral(resourceName: "stop"), for: .normal)
+            }
+        }
     }
     
     @IBAction func locationTapped(_ sender: Any) {
+        
     }
+    
+    @IBAction func playTapped(_ sender: Any) {
+        if let audioURL = self.audioURL {
+            audioPlayer = try? AVAudioPlayer(contentsOf: audioURL)
+            audioPlayer?.play()
+        }
+    }
+    
+    
+    
+    
 }

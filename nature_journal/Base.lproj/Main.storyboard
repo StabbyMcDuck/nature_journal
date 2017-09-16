@@ -73,6 +73,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxz-j7-Aza">
+                                <rect key="frame" x="68" y="377" width="70" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="microphone"/>
+                                <connections>
+                                    <action selector="recordTapped:" destination="0sK-lk-5Hu" eventType="touchUpInside" id="uvm-2G-FRJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpU-uI-qBF">
+                                <rect key="frame" x="234" y="377" width="69" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="placeholder"/>
+                                <connections>
+                                    <action selector="locationTapped:" destination="0sK-lk-5Hu" eventType="touchUpInside" id="7TT-zv-UXo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GK-YS-Fow">
+                                <rect key="frame" x="68" y="486" width="70" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="play-button"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="0sK-lk-5Hu" eventType="touchUpInside" id="zvm-rg-h0M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -110,6 +134,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="itemImageView" destination="qGO-vd-XzV" id="7BO-QI-fVD"/>
+                        <outlet property="locationButton" destination="tpU-uI-qBF" id="Yj4-Jg-6Gg"/>
+                        <outlet property="playButton" destination="5GK-YS-Fow" id="La6-PH-MhA"/>
+                        <outlet property="recordButton" destination="yxz-j7-Aza" id="nh4-uC-4JJ"/>
                         <outlet property="titleTextField" destination="1iC-c1-NQ5" id="wbN-me-OJB"/>
                     </connections>
                 </viewController>
@@ -136,5 +163,8 @@
     </scenes>
     <resources>
         <image name="camera" width="512" height="512"/>
+        <image name="microphone" width="512" height="512"/>
+        <image name="placeholder" width="512" height="512"/>
+        <image name="play-button" width="512" height="512"/>
     </resources>
 </document>
