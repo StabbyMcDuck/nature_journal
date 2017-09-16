@@ -52,7 +52,7 @@
         <!--Add Item-->
         <scene sceneID="HXi-jM-xjZ">
             <objects>
-                <viewController id="0sK-lk-5Hu" sceneMemberID="viewController">
+                <viewController id="0sK-lk-5Hu" customClass="AddViewController" customModule="nature_journal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yjU-SG-qQE"/>
                         <viewControllerLayoutGuide type="bottom" id="KTk-1A-9EX"/>
@@ -73,24 +73,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byq-g9-94D">
-                                <rect key="frame" x="162" y="553" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Location" image="placeholder"/>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="iU1-57-Fy3">
-                                <rect key="frame" x="67" y="336" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbQ-b0-4pV">
-                                <rect key="frame" x="162" y="483" width="51" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Record" image="microphone"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -109,10 +91,27 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="fJT-Px-eaz">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="save" id="eI5-BZ-jzM"/>
-                            <barButtonItem systemItem="camera" id="Qeg-W5-hXD"/>
+                            <barButtonItem systemItem="save" id="eI5-BZ-jzM">
+                                <connections>
+                                    <action selector="saveTapped:" destination="0sK-lk-5Hu" id="UZF-OC-7WX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="camera" id="Qeg-W5-hXD">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="0sK-lk-5Hu" id="5hB-to-eOd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="1p9-2D-dIE">
+                                <connections>
+                                    <action selector="photoTapped:" destination="0sK-lk-5Hu" id="ohb-gJ-p1S"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="itemImageView" destination="qGO-vd-XzV" id="7BO-QI-fVD"/>
+                        <outlet property="titleTextField" destination="1iC-c1-NQ5" id="wbN-me-OJB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GfI-MC-mrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,7 +136,5 @@
     </scenes>
     <resources>
         <image name="camera" width="512" height="512"/>
-        <image name="microphone" width="512" height="512"/>
-        <image name="placeholder" width="512" height="512"/>
     </resources>
 </document>

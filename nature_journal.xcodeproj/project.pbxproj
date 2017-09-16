@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8304E96F1F6DA99E008E331B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304E96E1F6DA99E008E331B /* AddViewController.swift */; };
 		835183E41F6D70FD0049BDA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835183E31F6D70FD0049BDA3 /* AppDelegate.swift */; };
 		835183E91F6D70FE0049BDA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835183E71F6D70FE0049BDA3 /* Main.storyboard */; };
 		835183EC1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 835183EA1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8304E96E1F6DA99E008E331B /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		835183E01F6D70FD0049BDA3 /* nature_journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nature_journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		835183E31F6D70FD0049BDA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		835183E81F6D70FE0049BDA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				835183E31F6D70FD0049BDA3 /* AppDelegate.swift */,
+				8304E96E1F6DA99E008E331B /* AddViewController.swift */,
 				835183E71F6D70FE0049BDA3 /* Main.storyboard */,
 				835183ED1F6D70FE0049BDA3 /* Assets.xcassets */,
 				835183EF1F6D70FE0049BDA3 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				835183EC1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld in Sources */,
 				835183E41F6D70FD0049BDA3 /* AppDelegate.swift in Sources */,
+				8304E96F1F6DA99E008E331B /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
