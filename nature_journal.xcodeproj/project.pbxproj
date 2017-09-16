@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		835183E41F6D70FD0049BDA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835183E31F6D70FD0049BDA3 /* AppDelegate.swift */; };
-		835183E61F6D70FD0049BDA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835183E51F6D70FD0049BDA3 /* ViewController.swift */; };
 		835183E91F6D70FE0049BDA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835183E71F6D70FE0049BDA3 /* Main.storyboard */; };
 		835183EC1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 835183EA1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld */; };
 		835183EE1F6D70FE0049BDA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 835183ED1F6D70FE0049BDA3 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		835183E01F6D70FD0049BDA3 /* nature_journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nature_journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		835183E31F6D70FD0049BDA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		835183E51F6D70FD0049BDA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		835183E81F6D70FE0049BDA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		835183EB1F6D70FE0049BDA3 /* nature_journal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nature_journal.xcdatamodel; sourceTree = "<group>"; };
 		835183ED1F6D70FE0049BDA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				835183E31F6D70FD0049BDA3 /* AppDelegate.swift */,
-				835183E51F6D70FD0049BDA3 /* ViewController.swift */,
 				835183E71F6D70FE0049BDA3 /* Main.storyboard */,
 				835183ED1F6D70FE0049BDA3 /* Assets.xcassets */,
 				835183EF1F6D70FE0049BDA3 /* LaunchScreen.storyboard */,
@@ -141,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				835183EC1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld in Sources */,
-				835183E61F6D70FD0049BDA3 /* ViewController.swift in Sources */,
 				835183E41F6D70FD0049BDA3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +304,7 @@
 				835183F71F6D70FE0049BDA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
