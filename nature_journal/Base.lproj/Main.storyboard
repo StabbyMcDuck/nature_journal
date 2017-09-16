@@ -6,6 +6,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,13 +38,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Nature Journal" id="UnK-xu-odz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7VA-OE-7C6"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Ips-m5-3fD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7VA-OE-7C6">
+                            <connections>
+                                <segue destination="0sK-lk-5Hu" kind="show" id="gke-Er-C4A"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="162" y="-821"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Item-->
         <scene sceneID="HXi-jM-xjZ">
             <objects>
                 <viewController id="0sK-lk-5Hu" sceneMemberID="viewController">
@@ -51,12 +60,49 @@
                     <view key="view" contentMode="scaleToFill" id="iBF-VX-VXR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qGO-vd-XzV">
+                                <rect key="frame" x="36" y="84" width="303" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qGO-vd-XzV" secondAttribute="height" multiplier="1:1" id="pd9-YO-NYm"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1iC-c1-NQ5">
+                                <rect key="frame" x="36" y="410" width="303" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edd-Wa-qtl">
+                                <rect key="frame" x="172" y="455" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Edd-Wa-qtl" firstAttribute="top" secondItem="1iC-c1-NQ5" secondAttribute="bottom" constant="15" id="023-7C-ly8"/>
+                            <constraint firstItem="qGO-vd-XzV" firstAttribute="leading" secondItem="iBF-VX-VXR" secondAttribute="leadingMargin" constant="51" id="3vO-7B-WI2"/>
+                            <constraint firstItem="qGO-vd-XzV" firstAttribute="top" secondItem="yjU-SG-qQE" secondAttribute="bottom" constant="20" id="4IK-Cj-kne"/>
+                            <constraint firstItem="1iC-c1-NQ5" firstAttribute="width" secondItem="qGO-vd-XzV" secondAttribute="height" multiplier="1:1" id="8eP-us-iob"/>
+                            <constraint firstItem="qGO-vd-XzV" firstAttribute="leading" secondItem="iBF-VX-VXR" secondAttribute="leadingMargin" constant="20" id="FFf-jh-NSu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1iC-c1-NQ5" secondAttribute="trailing" constant="20" id="NIY-ci-WR3"/>
+                            <constraint firstItem="1iC-c1-NQ5" firstAttribute="top" secondItem="qGO-vd-XzV" secondAttribute="bottom" constant="23" id="Sqj-8H-0NJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qGO-vd-XzV" secondAttribute="trailing" multiplier="9:5" id="cj7-9x-rRe"/>
+                            <constraint firstItem="Edd-Wa-qtl" firstAttribute="centerX" secondItem="iBF-VX-VXR" secondAttribute="centerX" id="d61-Uk-pRQ"/>
+                            <constraint firstItem="1iC-c1-NQ5" firstAttribute="leading" secondItem="iBF-VX-VXR" secondAttribute="leadingMargin" constant="20" id="ruE-sP-EgH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qGO-vd-XzV" secondAttribute="trailing" constant="20" id="vE0-e9-61z"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Item" id="fJT-Px-eaz">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="Qeg-W5-hXD"/>
+                            <barButtonItem systemItem="organize" id="s2D-4L-4AK"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GfI-MC-mrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="-822"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="-822.63868065967017"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yji-Xr-IaJ">
