@@ -33,19 +33,34 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
-        
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             itemImageView.image = chosenImage
-            
-            imagePicker.dismiss(animated: true, completion: nil)
-            
         }
+        imagePicker.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveTapped(_ sender: Any) {
+        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let item = Item(entity: Item.entity(), insertInto: context)
+            
+            item.title = titleTextField.text
+            
+            if let image = itemImageView.image {
+                if let imageData = UIImagePNGRepresentation(image) {
+                    item.image = imageData as NSData
+                }
+            }
+            
+            try? context.save()
+            
+            navigationController?.popViewController(animated: true)
+        }
     }
 
     @IBAction func recordTapped(_ sender: Any) {

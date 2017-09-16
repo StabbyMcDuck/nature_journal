@@ -17,13 +17,13 @@
         <scene sceneID="10n-p3-P3f">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ET-C1-f0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="CmW-6I-a83" sceneMemberID="viewController">
+                <tableViewController id="CmW-6I-a83" customClass="ItemsTableViewController" customModule="nature_journal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ubr-WG-Wu6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zxp-Z3-TYR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="zxp-Z3-TYR">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zxp-Z3-TYR" id="2Pn-IZ-lnl">
@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="162" y="-821"/>
         </scene>
-        <!--Add Item-->
+        <!--Add View Controller-->
         <scene sceneID="HXi-jM-xjZ">
             <objects>
                 <viewController id="0sK-lk-5Hu" customClass="AddViewController" customModule="nature_journal" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="qGO-vd-XzV" secondAttribute="trailing" constant="20" id="vE0-e9-61z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Item" id="fJT-Px-eaz">
+                    <navigationItem key="navigationItem" id="fJT-Px-eaz">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="save" id="eI5-BZ-jzM">
                                 <connections>
