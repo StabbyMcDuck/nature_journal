@@ -51,6 +51,9 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
                 audioRecorder?.prepareToRecord()
             }
         }
+        
+        playButton.isEnabled = false
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,6 +91,12 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
                 }
             }
             
+            if let audioURL = self.audioURL {
+                item.audioData = try? NSData(contentsOf: audioURL)
+                try? context.save()
+
+            }
+        
             try? context.save()
             
             navigationController?.popViewController(animated: true)
@@ -106,6 +115,8 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
                 recordButton.setImage(#imageLiteral(resourceName: "stop"), for: .normal)
             }
         }
+        
+        playButton.isEnabled = true
     }
     
     @IBAction func locationTapped(_ sender: Any) {

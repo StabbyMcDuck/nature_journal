@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E7C6E89EF1C3E4D5887616093EA39A0FB5BB9745",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "56F2288643473982ED08C09ED974FBA712238BC4" : 9223372036854775807,
+    "E7C6E89EF1C3E4D5887616093EA39A0FB5BB9745" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "98DC35C0-8311-46E7-823D-269B6024E3D9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "56F2288643473982ED08C09ED974FBA712238BC4" : "..",
+    "E7C6E89EF1C3E4D5887616093EA39A0FB5BB9745" : "nature_journal\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "nature_journal",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "nature_journal.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:StabbyMcDuck\/PitchPerfect.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "56F2288643473982ED08C09ED974FBA712238BC4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:StabbyMcDuck\/nature_journal.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E7C6E89EF1C3E4D5887616093EA39A0FB5BB9745"
+    }
+  ]
+}
