@@ -80,6 +80,9 @@
                                 <rect key="frame" x="164" y="376" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="play-button"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="PSq-gr-JaV" eventType="touchUpInside" id="SqI-1L-jBT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

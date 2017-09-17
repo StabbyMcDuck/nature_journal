@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ItemDetailViewController: UIViewController {
     
@@ -25,7 +26,7 @@ class ItemDetailViewController: UIViewController {
         
         itemImage.image = UIImage(data: (selectedItem.image as! NSData) as Data)
         itemTitle.text = selectedItem.title
-        
+        itemAudio.isEnabled = true
         
         /*
         if let image = selectedItem.image {
@@ -42,5 +43,16 @@ class ItemDetailViewController: UIViewController {
         }
          */
     }
+    
+    @IBAction func playTapped(_ sender: Any) {
+        var audioPlayer : AVAudioPlayer?
+
+        audioPlayer = try! AVAudioPlayer(data: selectedItem.audioData! as Data)
+
+        audioPlayer?.prepareToPlay()
+        audioPlayer?.play()
+        
+    }
+    
 
 }

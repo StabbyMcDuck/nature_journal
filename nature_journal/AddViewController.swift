@@ -93,8 +93,6 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
             
             if let audioURL = self.audioURL {
                 item.audioData = try? NSData(contentsOf: audioURL)
-                try? context.save()
-
             }
         
             try? context.save()
