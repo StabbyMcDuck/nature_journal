@@ -16,7 +16,6 @@
         <!--Nature Journal-->
         <scene sceneID="10n-p3-P3f">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ET-C1-f0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="CmW-6I-a83" customClass="ItemsTableViewController" customModule="nature_journal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ubr-WG-Wu6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -45,9 +44,65 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="PSq-gr-JaV" kind="show" identifier="moveToDetail" id="dbR-Wh-iTS"/>
+                    </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ET-C1-f0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="162" y="-821"/>
+        </scene>
+        <!--Item Detail View Controller-->
+        <scene sceneID="lqz-jW-Swz">
+            <objects>
+                <viewController id="PSq-gr-JaV" customClass="ItemDetailViewController" customModule="nature_journal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G6f-JM-uxD"/>
+                        <viewControllerLayoutGuide type="bottom" id="njm-Bl-RLG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pwg-71-Fif">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dGU-lo-KAF">
+                                <rect key="frame" x="36" y="103" width="303" height="168.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dGU-lo-KAF" secondAttribute="height" multiplier="9:5" id="CZH-Eh-eZn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0R-YN-QPv">
+                                <rect key="frame" x="36" y="317.5" width="303" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="921-T2-iUX">
+                                <rect key="frame" x="164" y="376" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="play-button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dGU-lo-KAF" firstAttribute="leading" secondItem="pwg-71-Fif" secondAttribute="leadingMargin" constant="20" id="2Ru-PZ-TkT"/>
+                            <constraint firstItem="dGU-lo-KAF" firstAttribute="centerX" secondItem="pwg-71-Fif" secondAttribute="centerX" id="AZ4-Qg-Pbx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c0R-YN-QPv" secondAttribute="trailing" constant="20" id="AqW-hD-dbN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dGU-lo-KAF" secondAttribute="trailing" constant="20" id="Enq-x2-QHE"/>
+                            <constraint firstItem="dGU-lo-KAF" firstAttribute="top" secondItem="G6f-JM-uxD" secondAttribute="bottom" constant="39" id="Fdg-T8-9Cb"/>
+                            <constraint firstItem="c0R-YN-QPv" firstAttribute="leading" secondItem="pwg-71-Fif" secondAttribute="leadingMargin" constant="20" id="Fkp-n7-z8F"/>
+                            <constraint firstItem="c0R-YN-QPv" firstAttribute="top" secondItem="dGU-lo-KAF" secondAttribute="bottom" constant="46" id="Irs-yA-uAO"/>
+                            <constraint firstItem="c0R-YN-QPv" firstAttribute="centerX" secondItem="pwg-71-Fif" secondAttribute="centerX" id="kWI-7Z-hsC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="itemAudio" destination="921-T2-iUX" id="GoF-2J-QI2"/>
+                        <outlet property="itemImage" destination="dGU-lo-KAF" id="Ifo-dt-O5B"/>
+                        <outlet property="itemTitle" destination="c0R-YN-QPv" id="nES-H2-jwe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSN-z2-Qgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="-74"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="HXi-jM-xjZ">
@@ -147,7 +202,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Yji-Xr-IaJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1gM-J9-O9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="jEP-Eu-gwq" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4c3-q8-NR2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -157,6 +211,7 @@
                         <segue destination="CmW-6I-a83" kind="relationship" relationship="rootViewController" id="KbE-6D-7JD"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gM-J9-O9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-790" y="-821"/>
         </scene>
