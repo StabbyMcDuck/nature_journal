@@ -69,4 +69,19 @@ class ItemsTableViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? ItemDetailViewController {
+            if let item = sender as? Item {
+                detailVC.selectedItem = item
+                detailVC.previousVC = self
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.row]
+
+        performSegue(withIdentifier: "moveToDetail", sender: item)
+    }
+    
 }

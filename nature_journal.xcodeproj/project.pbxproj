@@ -14,6 +14,7 @@
 		835183EC1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 835183EA1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld */; };
 		835183EE1F6D70FE0049BDA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 835183ED1F6D70FE0049BDA3 /* Assets.xcassets */; };
 		835183F11F6D70FE0049BDA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835183EF1F6D70FE0049BDA3 /* LaunchScreen.storyboard */; };
+		83B167021F6EC40A00D5D76A /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B167011F6EC40A00D5D76A /* ItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		835183ED1F6D70FE0049BDA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		835183F01F6D70FE0049BDA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		835183F21F6D70FE0049BDA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83B167011F6EC40A00D5D76A /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				835183E31F6D70FD0049BDA3 /* AppDelegate.swift */,
 				8304E9701F6DB704008E331B /* ItemsTableViewController.swift */,
+				83B167011F6EC40A00D5D76A /* ItemDetailViewController.swift */,
 				8304E96E1F6DA99E008E331B /* AddViewController.swift */,
 				835183E71F6D70FE0049BDA3 /* Main.storyboard */,
 				835183ED1F6D70FE0049BDA3 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B167021F6EC40A00D5D76A /* ItemDetailViewController.swift in Sources */,
 				835183EC1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld in Sources */,
 				835183E41F6D70FD0049BDA3 /* AppDelegate.swift in Sources */,
 				8304E9711F6DB704008E331B /* ItemsTableViewController.swift in Sources */,
