@@ -84,6 +84,9 @@
                                     <action selector="playTapped:" destination="PSq-gr-JaV" eventType="touchUpInside" id="SqI-1L-jBT"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yvS-bX-unJ">
+                                <rect key="frame" x="36" y="447" width="303" height="154"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -94,6 +97,8 @@
                             <constraint firstItem="dGU-lo-KAF" firstAttribute="top" secondItem="G6f-JM-uxD" secondAttribute="bottom" constant="39" id="Fdg-T8-9Cb"/>
                             <constraint firstItem="c0R-YN-QPv" firstAttribute="leading" secondItem="pwg-71-Fif" secondAttribute="leadingMargin" constant="20" id="Fkp-n7-z8F"/>
                             <constraint firstItem="c0R-YN-QPv" firstAttribute="top" secondItem="dGU-lo-KAF" secondAttribute="bottom" constant="46" id="Irs-yA-uAO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yvS-bX-unJ" secondAttribute="trailing" constant="20" id="KMp-SP-fT3"/>
+                            <constraint firstItem="yvS-bX-unJ" firstAttribute="leading" secondItem="pwg-71-Fif" secondAttribute="leadingMargin" constant="20" id="LHF-IX-kk6"/>
                             <constraint firstItem="c0R-YN-QPv" firstAttribute="centerX" secondItem="pwg-71-Fif" secondAttribute="centerX" id="kWI-7Z-hsC"/>
                         </constraints>
                     </view>
@@ -105,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSN-z2-Qgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="-74"/>
+            <point key="canvasLocation" x="156" y="-74.212893553223395"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="HXi-jM-xjZ">
@@ -145,6 +150,7 @@
                                 <state key="normal" title="Button" image="placeholder"/>
                                 <connections>
                                     <action selector="locationTapped:" destination="0sK-lk-5Hu" eventType="touchUpInside" id="7TT-zv-UXo"/>
+                                    <segue destination="z8g-bF-VOF" kind="show" id="yo9-wm-8aQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GK-YS-Fow">
@@ -217,6 +223,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gM-J9-O9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-790" y="-821"/>
+        </scene>
+        <!--Pin Map View Controller-->
+        <scene sceneID="3xH-KC-V5F">
+            <objects>
+                <viewController id="z8g-bF-VOF" customClass="PinMapViewController" customModule="nature_journal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lp6-Yx-CNP"/>
+                        <viewControllerLayoutGuide type="bottom" id="gaL-4d-pnY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bUv-cn-KdE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OBS-Pu-onk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OBS-Pu-onk" secondAttribute="trailing" id="4at-6R-HWJ"/>
+                            <constraint firstItem="OBS-Pu-onk" firstAttribute="leading" secondItem="bUv-cn-KdE" secondAttribute="leading" id="BC3-OE-KYf"/>
+                            <constraint firstItem="gaL-4d-pnY" firstAttribute="top" secondItem="OBS-Pu-onk" secondAttribute="bottom" id="Ld5-P8-NDC"/>
+                            <constraint firstItem="OBS-Pu-onk" firstAttribute="centerX" secondItem="bUv-cn-KdE" secondAttribute="centerX" id="q4w-3M-VfV"/>
+                            <constraint firstItem="OBS-Pu-onk" firstAttribute="centerY" secondItem="bUv-cn-KdE" secondAttribute="centerY" id="t9O-Ux-inb"/>
+                            <constraint firstItem="OBS-Pu-onk" firstAttribute="top" secondItem="bUv-cn-KdE" secondAttribute="top" id="u5v-F6-u3a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="OBS-Pu-onk" id="oaQ-Hk-adw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLg-ie-kwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="-822.63868065967017"/>
         </scene>
     </scenes>
     <resources>
