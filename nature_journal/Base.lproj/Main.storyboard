@@ -64,12 +64,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dGU-lo-KAF">
-                                <rect key="frame" x="36" y="103" width="303" height="168.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="dGU-lo-KAF" secondAttribute="height" multiplier="9:5" id="CZH-Eh-eZn"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0R-YN-QPv">
                                 <rect key="frame" x="36" y="317.5" width="303" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -77,16 +71,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="921-T2-iUX">
-                                <rect key="frame" x="164" y="376" width="46" height="30"/>
+                                <rect key="frame" x="164" y="383" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="play-button"/>
                                 <connections>
                                     <action selector="playTapped:" destination="PSq-gr-JaV" eventType="touchUpInside" id="SqI-1L-jBT"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yvS-bX-unJ">
-                                <rect key="frame" x="36" y="447" width="303" height="154"/>
-                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGU-lo-KAF">
+                                <rect key="frame" x="36" y="102" width="303" height="168.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dGU-lo-KAF" secondAttribute="height" multiplier="9:5" id="CZH-Eh-eZn"/>
+                                    <constraint firstAttribute="width" secondItem="dGU-lo-KAF" secondAttribute="height" multiplier="101:56" id="nde-7I-xJJ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -97,8 +95,6 @@
                             <constraint firstItem="dGU-lo-KAF" firstAttribute="top" secondItem="G6f-JM-uxD" secondAttribute="bottom" constant="39" id="Fdg-T8-9Cb"/>
                             <constraint firstItem="c0R-YN-QPv" firstAttribute="leading" secondItem="pwg-71-Fif" secondAttribute="leadingMargin" constant="20" id="Fkp-n7-z8F"/>
                             <constraint firstItem="c0R-YN-QPv" firstAttribute="top" secondItem="dGU-lo-KAF" secondAttribute="bottom" constant="46" id="Irs-yA-uAO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yvS-bX-unJ" secondAttribute="trailing" constant="20" id="KMp-SP-fT3"/>
-                            <constraint firstItem="yvS-bX-unJ" firstAttribute="leading" secondItem="pwg-71-Fif" secondAttribute="leadingMargin" constant="20" id="LHF-IX-kk6"/>
                             <constraint firstItem="c0R-YN-QPv" firstAttribute="centerX" secondItem="pwg-71-Fif" secondAttribute="centerX" id="kWI-7Z-hsC"/>
                         </constraints>
                     </view>
@@ -144,17 +140,8 @@
                                     <action selector="recordTapped:" destination="0sK-lk-5Hu" eventType="touchUpInside" id="uvm-2G-FRJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpU-uI-qBF">
-                                <rect key="frame" x="234" y="377" width="69" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="placeholder"/>
-                                <connections>
-                                    <action selector="locationTapped:" destination="0sK-lk-5Hu" eventType="touchUpInside" id="7TT-zv-UXo"/>
-                                    <segue destination="z8g-bF-VOF" kind="show" id="yo9-wm-8aQ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GK-YS-Fow">
-                                <rect key="frame" x="68" y="486" width="70" height="60"/>
+                                <rect key="frame" x="242" y="377" width="70" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="play-button"/>
                                 <connections>
@@ -198,7 +185,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="itemImageView" destination="qGO-vd-XzV" id="7BO-QI-fVD"/>
-                        <outlet property="locationButton" destination="tpU-uI-qBF" id="Yj4-Jg-6Gg"/>
                         <outlet property="playButton" destination="5GK-YS-Fow" id="La6-PH-MhA"/>
                         <outlet property="recordButton" destination="yxz-j7-Aza" id="nh4-uC-4JJ"/>
                         <outlet property="titleTextField" destination="1iC-c1-NQ5" id="wbN-me-OJB"/>
@@ -224,45 +210,10 @@
             </objects>
             <point key="canvasLocation" x="-790" y="-821"/>
         </scene>
-        <!--Pin Map View Controller-->
-        <scene sceneID="3xH-KC-V5F">
-            <objects>
-                <viewController id="z8g-bF-VOF" customClass="PinMapViewController" customModule="nature_journal" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lp6-Yx-CNP"/>
-                        <viewControllerLayoutGuide type="bottom" id="gaL-4d-pnY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bUv-cn-KdE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OBS-Pu-onk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="OBS-Pu-onk" secondAttribute="trailing" id="4at-6R-HWJ"/>
-                            <constraint firstItem="OBS-Pu-onk" firstAttribute="leading" secondItem="bUv-cn-KdE" secondAttribute="leading" id="BC3-OE-KYf"/>
-                            <constraint firstItem="gaL-4d-pnY" firstAttribute="top" secondItem="OBS-Pu-onk" secondAttribute="bottom" id="Ld5-P8-NDC"/>
-                            <constraint firstItem="OBS-Pu-onk" firstAttribute="centerX" secondItem="bUv-cn-KdE" secondAttribute="centerX" id="q4w-3M-VfV"/>
-                            <constraint firstItem="OBS-Pu-onk" firstAttribute="centerY" secondItem="bUv-cn-KdE" secondAttribute="centerY" id="t9O-Ux-inb"/>
-                            <constraint firstItem="OBS-Pu-onk" firstAttribute="top" secondItem="bUv-cn-KdE" secondAttribute="top" id="u5v-F6-u3a"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="OBS-Pu-onk" id="oaQ-Hk-adw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gLg-ie-kwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1892" y="-822.63868065967017"/>
-        </scene>
     </scenes>
     <resources>
         <image name="camera" width="512" height="512"/>
         <image name="microphone" width="512" height="512"/>
-        <image name="placeholder" width="512" height="512"/>
         <image name="play-button" width="512" height="512"/>
     </resources>
 </document>

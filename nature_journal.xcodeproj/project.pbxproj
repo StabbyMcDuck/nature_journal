@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8304E96F1F6DA99E008E331B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304E96E1F6DA99E008E331B /* AddViewController.swift */; };
 		8304E9711F6DB704008E331B /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304E9701F6DB704008E331B /* ItemsTableViewController.swift */; };
-		833053B01F6EEE86009F6730 /* PinMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833053AF1F6EEE86009F6730 /* PinMapViewController.swift */; };
 		835183E41F6D70FD0049BDA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835183E31F6D70FD0049BDA3 /* AppDelegate.swift */; };
 		835183E91F6D70FE0049BDA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835183E71F6D70FE0049BDA3 /* Main.storyboard */; };
 		835183EC1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 835183EA1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		8304E96E1F6DA99E008E331B /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		8304E9701F6DB704008E331B /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
-		833053AF1F6EEE86009F6730 /* PinMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinMapViewController.swift; sourceTree = "<group>"; };
 		835183E01F6D70FD0049BDA3 /* nature_journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nature_journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		835183E31F6D70FD0049BDA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		835183E81F6D70FE0049BDA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 				8304E9701F6DB704008E331B /* ItemsTableViewController.swift */,
 				83B167011F6EC40A00D5D76A /* ItemDetailViewController.swift */,
 				8304E96E1F6DA99E008E331B /* AddViewController.swift */,
-				833053AF1F6EEE86009F6730 /* PinMapViewController.swift */,
 				835183E71F6D70FE0049BDA3 /* Main.storyboard */,
 				835183ED1F6D70FE0049BDA3 /* Assets.xcassets */,
 				835183EF1F6D70FE0049BDA3 /* LaunchScreen.storyboard */,
@@ -103,12 +100,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Regina Imhoff";
 				TargetAttributes = {
 					835183DF1F6D70FD0049BDA3 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 84V2A2X743;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -152,7 +150,6 @@
 				83B167021F6EC40A00D5D76A /* ItemDetailViewController.swift in Sources */,
 				835183EC1F6D70FE0049BDA3 /* nature_journal.xcdatamodeld in Sources */,
 				835183E41F6D70FD0049BDA3 /* AppDelegate.swift in Sources */,
-				833053B01F6EEE86009F6730 /* PinMapViewController.swift in Sources */,
 				8304E9711F6DB704008E331B /* ItemsTableViewController.swift in Sources */,
 				8304E96F1F6DA99E008E331B /* AddViewController.swift in Sources */,
 			);
@@ -190,7 +187,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -198,7 +197,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -241,7 +244,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -249,7 +254,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -284,7 +293,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reginaimhoff.nature-journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -297,7 +307,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reginaimhoff.nature-journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
