@@ -70,14 +70,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="921-T2-iUX">
-                                <rect key="frame" x="164" y="383" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="play-button"/>
-                                <connections>
-                                    <action selector="playTapped:" destination="PSq-gr-JaV" eventType="touchUpInside" id="SqI-1L-jBT"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGU-lo-KAF">
                                 <rect key="frame" x="36" y="102" width="303" height="168.5"/>
                                 <constraints>
@@ -85,6 +77,14 @@
                                     <constraint firstAttribute="width" secondItem="dGU-lo-KAF" secondAttribute="height" multiplier="101:56" id="nde-7I-xJJ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="921-T2-iUX">
+                                <rect key="frame" x="152" y="394" width="70" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="play-button"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="PSq-gr-JaV" eventType="touchUpInside" id="SqI-1L-jBT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
