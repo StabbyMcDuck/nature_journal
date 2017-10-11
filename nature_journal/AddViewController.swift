@@ -98,6 +98,10 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
             try? context.save()
             
             navigationController?.popViewController(animated: true)
+            
+            print("AAAAAHHHAHAHAHHAHAHAHHA\n")
+            print(audioURL?.absoluteString as Any)
+            
         }
     }
     
@@ -126,6 +130,8 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
             audioPlayer = try? AVAudioPlayer(contentsOf: audioURL)
             audioPlayer?.play()
         }
+        
+        
     }
     
     

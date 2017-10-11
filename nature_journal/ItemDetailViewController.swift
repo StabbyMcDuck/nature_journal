@@ -46,11 +46,14 @@ class ItemDetailViewController: UIViewController {
     
     @IBAction func playTapped(_ sender: Any) {
         var audioPlayer : AVAudioPlayer?
-
-        audioPlayer = try? AVAudioPlayer(data: selectedItem.audioData! as Data)
-
-        audioPlayer?.prepareToPlay()
-        audioPlayer?.play()
+        
+        if let audioData = selectedItem.audioData {
+            audioPlayer = try? AVAudioPlayer(data: audioData as Data)
+            audioPlayer?.play()
+        }
+        
+        print("LOLOLOL\n")
+        print(selectedItem.audioData as Any)
         
     }
     
